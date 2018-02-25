@@ -1,0 +1,135 @@
+#figure-links {
+	position: relative;
+	top: 300px;
+}
+
+.figlinks {
+	z-index: 3000;
+	width: 100px;
+	height: 2px;
+	border-color: #FFFFFF;
+	position: absolute;
+	cursor: pointer;
+	opacity: 0.5;
+	transition: opacity 0.5s;
+	border-bottom: 2px solid;
+}
+
+.figlinks:hover {
+	opacity: 0.9;
+	border-top: 3px solid;
+	border-bottom: 0px;
+}
+
+.active-fig {
+	border-color: #FFFFFF;
+	opacity: 1;
+}
+
+#figlink1 {
+	left: 40px;
+}
+
+#figlink2 {
+	left: 160px;
+}
+
+#figlink3 {
+	left: 280px;
+}
+
+#figlink4 {
+	left: 400px;
+}
+
+#figlink5 {
+	left: 520px;
+}
+
+#figlink6 {
+	left: 640px;
+}
+
+.slideshow-loop {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	max-height: 300px;
+	max-width: 800px;
+}
+
+.slideshow-loop figure {
+	position: absolute;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 780px;
+	max-height: 300px;
+	overflow: hidden;
+}
+
+.slideshow-loop figure:nth-child(1) {
+	animation: xfade 36s 30s infinite;
+}
+
+.slideshow-loop figure:nth-child(2) {
+	animation: xfade 36s 24s infinite;
+}
+
+.slideshow-loop figure:nth-child(3) {
+	animation: xfade 36s 18s infinite;
+}
+
+.slideshow-loop figure:nth-child(4) {
+	animation: xfade 36s 12s infinite;
+}
+
+.slideshow-loop figure:nth-child(5) {
+	animation: xfade 36s 6s infinite;
+}
+
+.slideshow-loop figure:nth-child(6) {
+	animation: xfade 36s 0s infinite;
+}
+
+
+#loop-1 {
+
+}
+
+#loop-2 {
+
+}
+
+#loop-3 {
+
+}
+
+#loop-4 {
+
+}
+
+#loop-5 {
+
+}
+
+#loop-6 {
+
+}
+
+@keyframes xfade {
+	0% {
+		opacity: 1;
+	}
+	10.5% {
+		opacity: 1;
+	}
+	19% {
+		opacity: 0;
+	}
+	99% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="./css/style-main.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<link rel="stylesheet" href="css/swiper.min.css">
+<div class="slideshow-loop swiper-container swiper-container-horizontal">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="5">
+			<img id="loop-6" src="img/HTB1SncYXKGSBuNjSspbq6AiipXaO.jpg" alt="loop-5" width="1000" height="400">
+		</div>
+		<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0">
+			<img id="loop-1" src="img/HTB11PgRX29TBuNjy0Fc762eiFXag.png" alt="loop-1" width="1000" height="400">
+		</div>
+		<div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1">
+			<img id="loop-2" src="img/HTB175EcX_tYBeNjy1Xd760XyVXaB.png" alt="loop-2" width="1000" height="400">
+		</div>
+		<div class="swiper-slide" data-swiper-slide-index="2">
+			<img id="loop-3" src="img/HTB1ggcUXVmWBuNjSspd762ugXXam.png" alt="loop-3" width="1000" height="400">
+		</div>
+		<div class="swiper-slide" data-swiper-slide-index="3">
+			<img id="loop-4" src="img/HTB1J.wZX1SSBuNjy0Fl762BpVXaL.png" alt="loop-4" width="1000" height="400">
+		</div>
+		<div class="swiper-slide" data-swiper-slide-index="4">
+			<img id="loop-5" src="img/HTB1XR30XpuWBuNjSspn7601NVXaK.png" alt="loop-5" width="1000" height="400">
+		</div>
+		<div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="5">
+			<img id="loop-6" src="img/HTB1SncYXKGSBuNjSspbq6AiipXaO.jpg" alt="loop-5" width="1000" height="400">
+		</div>
+		<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0">
+			<img id="loop-1" src="img/HTB11PgRX29TBuNjy0Fc762eiFXag.png" alt="loop-1" width="1000" height="400">
+		</div>
+	</div>
+	<div id="figure-links">
+		<a id="figlink1" class="figlinks active-fig" onclick="goToFigure('figlink1');" onmouseover="peekFigure('figlink1');"></a>
+		<a id="figlink2" class="figlinks" onclick="goToFigure('figlink2');" onmouseover="peekFigure('figlink2');"></a>
+		<a id="figlink3" class="figlinks" onclick="goToFigure('figlink3');" onmouseover="peekFigure('figlink3');"></a>
+		<a id="figlink4" class="figlinks" onclick="goToFigure('figlink4');" onmouseover="peekFigure('figlink4');"></a>
+		<a id="figlink5" class="figlinks" onclick="goToFigure('figlink5');" onmouseover="peekFigure('figlink5');"></a>
+		<a id="figlink6" class="figlinks" onclick="goToFigure('figlink6');" onmouseover="peekFigure('figlink6');"></a>
+	</div>
+</div>
+<script>
+	function goToFigure(elementId) {
+		removeActiveClass();
+		var el = document.getElementById(elementId);
+		el.classList.add('active-fig');
+	}
+
+	function peekFigure(elementId) {
+		var el = document.getElementById(elementId);
+	}
+
+
+	function removeActiveClass() {
+		for (i = 1; i <= 6; i++) {
+			var elementId = 'figlink';
+			elementId.concat(i);
+			var element = document.getElementById(elementId);
+			alert(elementId);
+		}
+	}
+</script>
+<script>
+	var swiper2 = new Swiper('.swiper-container', {
+		spaceBetween: 30,
+		pagination: {
+			el: '.swiper-pagination1',
+			clickable: true,
+			direction: 'horizontal',
+			autoplay: true,
+			mousewheelControl: true,
+			simulateTouch: true,
+			loop: true,
+			autoplayDisableOnInteraction: true
+		},
+	});
+</script>
+
+</html>
